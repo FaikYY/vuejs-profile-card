@@ -16,8 +16,8 @@
     <CardRowProfilePhoto />
     
     <CardRow 
-      v-bind:href="'tel:+' + '19364009468'" 
-      list_item_text="123 456 7899" 
+      v-bind:href="'tel:+' + '11234567899'" 
+      list_item_text="123 345 7899" 
       icon_name="phone"
     />
     
