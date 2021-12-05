@@ -52,6 +52,7 @@ export default {
 -->
 <style>
     img{
+      transition: var(--list-item-transition);
         width: 12rem;
         border-radius: 50%;
 
