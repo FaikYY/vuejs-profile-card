@@ -180,7 +180,7 @@ export default {
 }
 
 .darkMode #profile-photo{
-  border: 5px solid rgb(160, 160, 160);
+  border: 5px solid rgb(100, 100, 100);
 }
 
 .darkMode #title{
