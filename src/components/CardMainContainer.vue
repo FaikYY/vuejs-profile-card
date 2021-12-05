@@ -158,7 +158,7 @@ export default {
 }
 /* DARK MODE STYLES */
 .darkMode{
-  background-color: black;
+  background-color: rgb(15, 15, 15);
 }
 
 .darkMode h1{
