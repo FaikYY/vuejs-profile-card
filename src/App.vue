@@ -32,6 +32,9 @@
 import CardMainContainer from './components/CardMainContainer.vue'
 
 export default {
+  created(){
+    document.title = "Profile Page"
+  },
   name: 'App',
   components: {
     CardMainContainer
