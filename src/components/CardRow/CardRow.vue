@@ -45,7 +45,7 @@ export default {
       default: "I am the default text",
     },
     icon_name: String,
-  },
+  }
 };
 </script>
 
@@ -63,11 +63,6 @@ export default {
                      \______/               
 -->
 <style scoped>
-* {
-  --list-item-color: rgb(100, 100, 100);
-  --list-item-color-on-hover: rgb(235, 235, 235);
-  --list-item-transition: 0.15s ease-in-out;
-}
 
 .list-item {
   margin-top: 1.25rem;
@@ -79,7 +74,7 @@ export default {
   padding: 1rem;
   border-radius: 5px;
 
-  background-color: rgb(220, 220, 220);
+  background-color: var(--list-item-background-color);
   transition: var(--list-item-transition);
 }
 
@@ -108,6 +103,7 @@ export default {
   color: var(--list-item-color-on-hover);
 }
 
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .list-item{
@@ -121,6 +117,7 @@ export default {
   #list-item-icon{
     font-size: 1.5rem;
   }
+
 }
 </style>
 

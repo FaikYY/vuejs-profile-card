@@ -12,7 +12,7 @@
                                   |__/                                        
 -->
 <template>
-  <CardMainContainer/>
+  <CardMainContainer />
 </template>
 
 <!-- 
@@ -53,6 +53,7 @@ export default {
                      \______/               
 -->
 <style>
+
 *{
   margin: 0;
   padding: 0;

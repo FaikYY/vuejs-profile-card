@@ -12,7 +12,10 @@
                                   |__/                                        
 -->
 <template>
-  <div class="main-container">
+  <div :class="{darkMode: is_darkMode_active}" class="main-container" >
+   
+    <button id="darkMode-toggle-on" v-if="is_darkMode_active" @click="toggle_darkMode">ON 🌙</button>
+    <button id="darkMode-toggle-off" v-else @click="toggle_darkMode">OFF 🌙</button>
     <CardRowProfilePhoto />
     
     <CardRow 
@@ -66,12 +69,23 @@ import CardRowProfilePhoto from './CardTop/CardTopProfile.vue';
 export default {
   components: { 
     CardRow, 
-    CardRowProfilePhoto 
+    CardRowProfilePhoto,
+    // DarkMode
     },
   name: 'CardMainContainer',
   props: {
     msg: String,
     initialCount: Number
+  },
+  data: function() {
+    return{
+      is_darkMode_active: false
+    }
+  },
+  methods:{
+    toggle_darkMode(){
+      this.is_darkMode_active = !this.is_darkMode_active;
+    }
   }
 }
 </script>
@@ -90,12 +104,123 @@ export default {
                      \______/               
 -->
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+* {
+  --list-item-color: rgb(100, 100, 100);
+  --list-item-background-color: rgb(220, 220, 220);
+  --list-item-color-on-hover: rgb(235, 235, 235);
+  --list-item-transition: 0.15s ease-in-out;
+
+  --list-item-color-darkMode: rgb(150, 150, 150);
+  --list-item-background-color-darkMode: rgb(30, 30, 30);
+  --list-item-on-hover-darkMode:  rgb(15, 15, 15);
+}
+
 .main-container{
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  transition: .2s ease-in-out;
+}
+
+#darkMode-toggle-on{
+  padding: 1rem;
+  font-size: 1rem;
+
+  background-color: rgb(60, 60, 60);
+  color:  rgb(240, 240, 240);
+  
+  border: none;
+  border-radius: 10px;
+  
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
+
+#darkMode-toggle-off{
+  padding: 1rem;
+  font-size: 1rem;
+
+  background-color: var(--list-item-background-color);
+  color: rgb(60, 60, 60);
+  
+  border: none;
+  border-radius: 10px;
+  
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
+/* DARK MODE STYLES */
+.darkMode{
+  background-color: black;
+}
+
+.darkMode h1{
+  color: white;
+}
+
+.darkMode .list-item{
+    color: var(--list-item-color-darkMode);
+    background-color: var(--list-item-background-color-darkMode);
+}
+
+.darkMode .list-item:hover{
+    background-color: rgb(60, 60, 60);
+}
+
+.darkMode #list-item-link,
+.darkMode #list-item-icon{
+  color: var(--list-item-color-darkMode);
+}
+
+.darkMode #profile-photo{
+  border: 5px solid rgb(160, 160, 160);
+}
+
+.darkMode #title{
+  color: rgb(180, 180, 180);  
+}
+
+.darkMode #subtitle{
+  color: rgb(160, 160, 160);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #darkMode-toggle-on{
+  font-size: .8rem;
+  padding: .8rem;
+
+  background-color: rgb(60, 60, 60);
+  color:  rgb(240, 240, 240);
+  
+  border: none;
+  border-radius: 10px;
+  
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
+}
+
+#darkMode-toggle-off{
+  font-size: .8rem;
+  padding: .8rem;
+
+  background-color: var(--list-item-background-color);
+  color: rgb(60, 60, 60);
+  
+  border: none;
+  border-radius: 10px;
+  
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
+}
 }
 </style>

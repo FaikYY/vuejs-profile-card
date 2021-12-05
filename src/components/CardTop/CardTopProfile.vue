@@ -12,10 +12,10 @@
                                   |__/                                        
 -->
 <template>
-  <img src="https://avatars.githubusercontent.com/u/63950761?v=4" alt="profile-photo">
+  <img id="profile-photo" src="https://avatars.githubusercontent.com/u/63950761?v=4" alt="profile-photo">
   <br>
-  <h1>Faik Yesilyaprak</h1>
-  <h2>Junior Front-End Developer</h2>
+  <h1 id="title">Faik Yesilyaprak</h1>
+  <h2 id="subtitle">Junior Front-End Developer</h2>
 </template>
 
 <!-- 
