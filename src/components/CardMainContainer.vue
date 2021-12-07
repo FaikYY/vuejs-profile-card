@@ -23,7 +23,18 @@
       list_item_text="123 345 7899" 
       icon_name="phone"
     /> -->
-    
+
+    <CardRow 
+      v-bind:href="'https://www.linkedin.com/in/faik-yesilyaprak/'" 
+      list_item_text="LinkedIn/faik-yesilyaprak" 
+      icon_name="work" 
+    />
+
+    <CardRow 
+      v-bind:href="'mailto:' + 'faikyesilyaprak@outlook.com'" 
+      list_item_text="faikyesilyaprak@outlook.com" 
+      icon_name="email" 
+    />
     
     <CardRow 
       v-bind:href="'https://www.github.com/FaikYY'" 
@@ -39,12 +50,6 @@
     />
     
     
-    <CardRow 
-      v-bind:href="'mailto:' + 'faikyesilyaprak@outlook.com'" 
-      list_item_text="faikyesilyaprak@outlook.com" 
-      icon_name="email" 
-    />
-  
   </div>
 </template>
 
