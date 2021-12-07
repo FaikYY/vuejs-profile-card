@@ -26,7 +26,7 @@
 
     <CardRow 
       v-bind:href="'https://www.linkedin.com/in/faik-yesilyaprak/'" 
-      list_item_text="LinkedIn/faik-yesilyaprak" 
+      list_item_text="faik-yesilyaprak" 
       icon_name="fab fa-linkedin" 
     />
 
@@ -38,14 +38,14 @@
     
     <CardRow 
       v-bind:href="'https://www.github.com/FaikYY'" 
-      list_item_text="Github/FaikYY" 
+      list_item_text="FaikYY" 
       icon_name="fab fa-github"
     />
 
 
     <CardRow 
       v-bind:href="'https://www.instagram.com/bythewayimfaik/'" 
-      list_item_text="Instagram/bythewayimfaik" 
+      list_item_text="bythewayimfaik" 
       icon_name="fab fa-instagram"
     />
     
