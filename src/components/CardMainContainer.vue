@@ -27,26 +27,26 @@
     <CardRow 
       v-bind:href="'https://www.linkedin.com/in/faik-yesilyaprak/'" 
       list_item_text="LinkedIn/faik-yesilyaprak" 
-      icon_name="work" 
+      icon_name="fab fa-linkedin" 
     />
 
     <CardRow 
       v-bind:href="'mailto:' + 'faikyesilyaprak@outlook.com'" 
       list_item_text="faikyesilyaprak@outlook.com" 
-      icon_name="email" 
+      icon_name="fas fa-at" 
     />
     
     <CardRow 
       v-bind:href="'https://www.github.com/FaikYY'" 
       list_item_text="Github/FaikYY" 
-      icon_name="face"
+      icon_name="fab fa-github"
     />
 
 
     <CardRow 
       v-bind:href="'https://www.instagram.com/bythewayimfaik/'" 
       list_item_text="Instagram/bythewayimfaik" 
-      icon_name="tag"
+      icon_name="fab fa-instagram"
     />
     
     

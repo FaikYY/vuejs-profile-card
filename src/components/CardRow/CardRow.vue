@@ -13,12 +13,12 @@
 -->
 <template>
   <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
     rel="stylesheet"
   />
 
   <a class="list-item" v-bind:href="this.href">
-    <span id="list-item-icon" class="material-icons">{{ icon_name }}</span>
+    <span id="list-item-icon" :class="icon_name"></span>
     <a id="list-item-link">{{ list_item_text }}</a>
   </a>
 </template>
