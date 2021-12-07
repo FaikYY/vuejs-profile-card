@@ -12,47 +12,50 @@
                                   |__/                                        
 -->
 <template>
-  <div :class="{darkMode: is_darkMode_active}" class="main-container" >
-   
-    <button id="darkMode-toggle-on" v-if="is_darkMode_active" @click="toggle_darkMode">ON 🌙</button>
-    <button id="darkMode-toggle-off" v-else @click="toggle_darkMode">OFF 🌙</button>
+  <div :class="{ darkMode: is_darkMode_active }" class="main-container">
+    <button
+      id="darkMode-toggle-on"
+      v-if="is_darkMode_active"
+      @click="toggle_darkMode"
+    >
+      ON 🌙
+    </button>
+    <button id="darkMode-toggle-off" v-else @click="toggle_darkMode">
+      OFF 🌙
+    </button>
     <CardRowProfilePhoto />
-    
+
     <!-- <CardRow 
       v-bind:href="'tel:+' + '11234567899'" 
       list_item_text="123 345 7899" 
       icon_name="phone"
     /> -->
 
-    <CardRow 
-      v-bind:href="'https://www.linkedin.com/in/faik-yesilyaprak/'" 
-      list_item_text="faik-yesilyaprak" 
-      icon_name="fab fa-linkedin" 
-    />
-
-    <CardRow 
-      v-bind:href="'mailto:' + 'faikyesilyaprak@outlook.com'" 
-      list_item_text="faikyesilyaprak@outlook.com" 
-      icon_name="fas fa-at" 
-    />
-    
-    <CardRow 
-      v-bind:href="'https://www.github.com/FaikYY'" 
-      list_item_text="FaikYY" 
+    <CardRow
+      v-bind:href="'https://www.github.com/FaikYY'"
+      list_item_text="FaikYY"
       icon_name="fab fa-github"
     />
 
-
-    <CardRow 
-      v-bind:href="'https://www.instagram.com/bythewayimfaik/'" 
-      list_item_text="bythewayimfaik" 
-      icon_name="fab fa-instagram"
+    <CardRow
+      v-bind:href="'https://www.linkedin.com/in/faik-yesilyaprak/'"
+      list_item_text="faik-yesilyaprak"
+      icon_name="fab fa-linkedin"
     />
-    
-    
+
+    <CardRow
+      v-bind:href="'https://www.behance.net/faikyesilyaprak'"
+      list_item_text="faikyesilyaprak"
+      icon_name="fab fa-behance-square"
+    />
+
+    <CardRow
+      v-bind:href="'mailto:' + 'faikyesilyaprak@outlook.com'"
+      list_item_text="faikyesilyaprak@outlook.com"
+      icon_name="fas fa-at"
+    />
   </div>
 </template>
-
 
 <!-- 
                                /$$             /$$    
@@ -68,31 +71,31 @@
                                   |__/                
 -->
 <script>
-import CardRow from './CardRow/CardRow.vue';
-import CardRowProfilePhoto from './CardTop/CardTopProfile.vue';
+import CardRow from "./CardRow/CardRow.vue";
+import CardRowProfilePhoto from "./CardTop/CardTopProfile.vue";
 
 export default {
-  components: { 
-    CardRow, 
+  components: {
+    CardRow,
     CardRowProfilePhoto,
     // DarkMode
-    },
-  name: 'CardMainContainer',
+  },
+  name: "CardMainContainer",
   props: {
     msg: String,
-    initialCount: Number
+    initialCount: Number,
   },
-  data: function() {
-    return{
-      is_darkMode_active: false
-    }
+  data: function () {
+    return {
+      is_darkMode_active: false,
+    };
   },
-  methods:{
-    toggle_darkMode(){
+  methods: {
+    toggle_darkMode() {
       this.is_darkMode_active = !this.is_darkMode_active;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <!-- 
@@ -118,10 +121,10 @@ export default {
 
   --list-item-color-darkMode: rgb(150, 150, 150);
   --list-item-background-color-darkMode: rgb(30, 30, 30);
-  --list-item-on-hover-darkMode:  rgb(15, 15, 15);
+  --list-item-on-hover-darkMode: rgb(15, 15, 15);
 }
 
-.main-container{
+.main-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -129,103 +132,103 @@ export default {
   justify-content: center;
   align-items: center;
 
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-#darkMode-toggle-on{
+#darkMode-toggle-on {
   padding: 1rem;
   font-size: 1rem;
 
   background-color: rgb(60, 60, 60);
-  color:  rgb(240, 240, 240);
-  
+  color: rgb(240, 240, 240);
+
   border: none;
   border-radius: 10px;
-  
+
   position: absolute;
   top: 5rem;
   right: 5rem;
 }
 
-#darkMode-toggle-off{
+#darkMode-toggle-off {
   padding: 1rem;
   font-size: 1rem;
 
   background-color: var(--list-item-background-color);
   color: rgb(60, 60, 60);
-  
+
   border: none;
   border-radius: 10px;
-  
+
   position: absolute;
   top: 5rem;
   right: 5rem;
 }
 /* DARK MODE STYLES */
-.darkMode{
+.darkMode {
   background-color: rgb(15, 15, 15);
 }
 
-.darkMode h1{
+.darkMode h1 {
   color: white;
 }
 
-.darkMode .list-item{
-    color: var(--list-item-color-darkMode);
-    background-color: var(--list-item-background-color-darkMode);
+.darkMode .list-item {
+  color: var(--list-item-color-darkMode);
+  background-color: var(--list-item-background-color-darkMode);
 }
 
-.darkMode .list-item:hover{
-    background-color: rgb(60, 60, 60);
+.darkMode .list-item:hover {
+  background-color: rgb(60, 60, 60);
 }
 
 .darkMode #list-item-link,
-.darkMode #list-item-icon{
+.darkMode #list-item-icon {
   color: var(--list-item-color-darkMode);
 }
 
-.darkMode #profile-photo{
+.darkMode #profile-photo {
   border: 5px solid rgb(100, 100, 100);
 }
 
-.darkMode #title{
-  color: rgb(180, 180, 180);  
+.darkMode #title {
+  color: rgb(180, 180, 180);
 }
 
-.darkMode #subtitle{
+.darkMode #subtitle {
   color: rgb(160, 160, 160);
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  #darkMode-toggle-on{
-  font-size: .8rem;
-  padding: .8rem;
+  #darkMode-toggle-on {
+    font-size: 0.8rem;
+    padding: 0.8rem;
 
-  background-color: rgb(60, 60, 60);
-  color:  rgb(240, 240, 240);
-  
-  border: none;
-  border-radius: 10px;
-  
-  position: absolute;
-  top: 4rem;
-  right: 3rem;
-}
+    background-color: rgb(60, 60, 60);
+    color: rgb(240, 240, 240);
 
-#darkMode-toggle-off{
-  font-size: .8rem;
-  padding: .8rem;
+    border: none;
+    border-radius: 10px;
 
-  background-color: var(--list-item-background-color);
-  color: rgb(60, 60, 60);
-  
-  border: none;
-  border-radius: 10px;
-  
-  position: absolute;
-  top: 4rem;
-  right: 3rem;
-}
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+  }
+
+  #darkMode-toggle-off {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+
+    background-color: var(--list-item-background-color);
+    color: rgb(60, 60, 60);
+
+    border: none;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+  }
 }
 </style>
