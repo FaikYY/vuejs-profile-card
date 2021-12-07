@@ -18,11 +18,11 @@
     <button id="darkMode-toggle-off" v-else @click="toggle_darkMode">OFF 🌙</button>
     <CardRowProfilePhoto />
     
-    <CardRow 
+    <!-- <CardRow 
       v-bind:href="'tel:+' + '11234567899'" 
       list_item_text="123 345 7899" 
       icon_name="phone"
-    />
+    /> -->
     
     
     <CardRow 

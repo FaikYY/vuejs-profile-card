@@ -12,8 +12,12 @@
                                   |__/                                        
 -->
 <template>
-  <img id="profile-photo" src="https://avatars.githubusercontent.com/u/63950761?v=4" alt="profile-photo">
-  <br>
+  <img
+    id="profile-photo"
+    src="https://avatars.githubusercontent.com/u/63950761?v=4"
+    alt="profile-photo"
+  />
+  <br />
   <h1 id="title">Faik Yesilyaprak</h1>
   <h2 id="subtitle">Junior Front-End Developer</h2>
 </template>
@@ -32,9 +36,7 @@
                                   |__/                
 -->
 <script scoped>
-export default {
-
-}
+export default {};
 </script>
 
 <!-- 
@@ -51,52 +53,52 @@ export default {
                      \______/               
 -->
 <style>
-    img{
-      transition: var(--list-item-transition);
-        width: 12rem;
-        border-radius: 50%;
+img {
+  transition: var(--list-item-transition);
+  width: 12rem;
+  border-radius: 50%;
 
-        border: 5px solid rgb(150, 150, 150);
-    }
+  border: 5px solid rgb(150, 150, 150);
+}
 
-    h1{
-      color: rgb(100, 100, 100);
-      
-      font-size: 3rem;
-      font-family: monospace;
+h1 {
+  color: rgb(100, 100, 100);
 
-      margin-bottom: 0;
-    }
+  font-size: 3rem;
+  font-family: monospace;
 
-    h2{
-      color: rgb(130, 130, 130);
+  margin-bottom: 0;
+}
 
-      font-size: 1.5rem;
+h2 {
+  color: rgb(130, 130, 130);
 
-      margin-top: .5rem;
-    }
+  font-size: 1.5rem;
 
-@media  only screen and (max-width: 600px) {
-  img{
-        width: 10rem;
-        border-radius: 50%;
-    }
+  margin-top: 0.5rem;
+}
 
-    h1{
-      color: rgb(100, 100, 100);
-      
-      font-size: 2rem;
-      font-family: monospace;
+@media only screen and (max-width: 600px) {
+  img {
+    width: 10rem;
+    border-radius: 50%;
+  }
 
-      margin-bottom: 0;
-    }
+  h1 {
+    color: rgb(100, 100, 100);
 
-    h2{
-      color: rgb(130, 130, 130);
+    font-size: 2rem;
+    font-family: monospace;
 
-      font-size: 1rem;
+    margin-bottom: 0;
+  }
 
-      margin-top: .5rem;
-    }
+  h2 {
+    color: rgb(130, 130, 130);
+
+    font-size: 1rem;
+
+    margin-top: 0.5rem;
+  }
 }
 </style>
